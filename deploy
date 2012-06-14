@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 RUNDIR=`pwd`
 
 FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile )
 
 for name in ${FILENAMES[@]}; do
+    echo --- $name ---
     # Rename already exists file with old ext
     if [ -f $HOME/$name ]; then
         mv -v $HOME/$name $HOME/$name.old
