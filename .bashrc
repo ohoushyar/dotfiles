@@ -87,8 +87,8 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+    . $HOME/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -97,6 +97,13 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+if [ -f $HOME/.git-completion.sh ]; then
+    # git auto completion
+    source $HOME/.git-completion.sh
+fi
+PS1='[\u@\h \W]$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
+
 
 # Unit test parallelism for perlbrew
 TEST_JOBS=5
