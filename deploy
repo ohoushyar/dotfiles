@@ -1,0 +1,18 @@
+#!/bin/sh
+RUNDIR=`pwd`
+
+FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile )
+
+for name in ${FILENAMES[@]}; do
+    # Rename already exists file with old ext
+    if [ -f $HOME/$name ]; then
+        mv -v $HOME/$name $HOME/$name.old
+    fi
+
+    # Creat a symlink
+    ln -sv $RUNDIR/$name $HOME/$name
+done
+
+echo DONE.
+
+

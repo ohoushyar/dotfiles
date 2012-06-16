@@ -1,0 +1,15 @@
+[user]
+	name = Omid Houshyar
+    email = ohoushyar@gmail.com
+[color]
+    ui = auto
+[alias]
+    all-graph = log --pretty=format:\"%h - %ar %an: %s\" --graph
+    week-graph = log --since=1,weeks --pretty=format:\"%h - %ar %an: %s\" --graph
+    rebaseme = rebase --preserve-merges HEAD@{upstream}
+    st = status
+[diff]
+    tool = vimdiff
+
+[core]
+	editor = /usr/bin/vim
