@@ -1,16 +1,24 @@
-#!/bin/sh
+#!/bin/bash
 RUNDIR=`pwd`
 
-FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile )
+FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile .module-starter )
 
 for name in ${FILENAMES[@]}; do
     # Rename already exists file with old ext
-    if [ -f $HOME/$name ]; then
-        mv -v $HOME/$name $HOME/$name.old
+    dest=$HOME/$name
+    if [ -e $dest ]; then
+        ls_result=`ls -al $dest | grep "$RUNDIR/$name"`
+        if [ ! -n ls_result ]; then
+            echo rename the file [$dest]
+            #mv -v $HOME/$name $HOME/$name.old
+        else
+            echo ignore dest[$dest]
+            continue
+        fi
     fi
 
     # Creat a symlink
-    ln -sv $RUNDIR/$name $HOME/$name
+    #ln -sv $RUNDIR/$name $HOME/$name
 done
 
 echo DONE.
