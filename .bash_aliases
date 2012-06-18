@@ -1,5 +1,10 @@
 # some more ls aliases
-alias ls='ls --color=auto'
+if [ `uname` == 'Darwin' ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+
 alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'

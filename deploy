@@ -11,7 +11,7 @@ for name in ${FILENAMES[@]}; do
         ls_result=`ls -al $dest | grep "$RUNDIR/$name"`
         if [ ! -n ls_result ]; then
             echo rename the file [$dest]
-            #mv -v $HOME/$name $HOME/$name.old
+            mv -v $HOME/$name $HOME/$name.old
         else
             echo ignore dest[$dest]
             continue
@@ -19,7 +19,7 @@ for name in ${FILENAMES[@]}; do
     fi
 
     # Creat a symlink
-    #ln -sv $RUNDIR/$name $HOME/$name
+    ln -sv $RUNDIR/$name $HOME/$name
 done
 
 echo DONE.
