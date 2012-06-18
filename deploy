@@ -1,9 +1,10 @@
 #!/bin/bash
 RUNDIR=`pwd`
 
-FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile .module-starter )
+FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile .module-starter .bash_aliases )
 
 for name in ${FILENAMES[@]}; do
+    echo --- $name ---
     # Rename already exists file with old ext
     dest=$HOME/$name
     if [ -e $dest ]; then
