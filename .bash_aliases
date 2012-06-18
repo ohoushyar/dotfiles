@@ -7,7 +7,6 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
 
-alias office='ssh omid@omid.regentmarkets.com'
 alias star='ssh -p24312 space@localhost'
 
 epoch_to_datetime() { perl -MDateTime -E "say DateTime->from_epoch(epoch => $1)->datetime();"; }
