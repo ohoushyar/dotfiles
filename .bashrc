@@ -104,6 +104,9 @@ if [ -f $HOME/.git-completion.sh ]; then
 fi
 PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
 
+if [ -f $HOME/.lymbix_api/init ]; then
+    source $HOME/.lymbix_api/init
+fi
 
 # Unit test parallelism for perlbrew
 TEST_JOBS=5
