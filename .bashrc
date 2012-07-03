@@ -96,12 +96,17 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-    PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
-fi
-
-if [ -f $HOME/.git-completion.sh ]; then
+    git_ps=1
+elif [ -f /etc/bash_completion.d/git ]; then
+    source /etc/bash_completion.d/git
+    git_ps=1
+elif [ -f $HOME/.git-completion.sh ]; then
     # git auto completion
     source $HOME/.git-completion.sh
+    git_ps=1
+fi
+
+if [ -n "$git_ps" ]; then
     PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
 fi
 
