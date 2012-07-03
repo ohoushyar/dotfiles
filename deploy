@@ -9,7 +9,7 @@ for name in ${FILENAMES[@]}; do
     dest=$HOME/$name
     if [ -e $dest ]; then
         ls_result=`ls -al $dest | grep "$RUNDIR/$name"`
-        if [ ! -n ls_result ]; then
+        if [ ! -n "$ls_result" ]; then
             echo rename the file [$dest]
             mv -v $HOME/$name $HOME/$name.old
         else

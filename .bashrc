@@ -109,6 +109,8 @@ if [ -f $HOME/.lymbix_api/init ]; then
 fi
 
 # Unit test parallelism for perlbrew
-TEST_JOBS=5
+if [ -f $HOME/perl5/perlbrew/etc/bashrc ]; then
+    TEST_JOBS=5
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
 
-source ~/perl5/perlbrew/etc/bashrc
