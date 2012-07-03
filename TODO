@@ -1,0 +1,1 @@
+- Change deploy to get email address as a parameter and set it on .gitconfig accordingly
