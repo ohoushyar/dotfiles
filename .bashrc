@@ -96,13 +96,14 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+    PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
 fi
 
 if [ -f $HOME/.git-completion.sh ]; then
     # git auto completion
     source $HOME/.git-completion.sh
+    PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
 fi
-PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
 
 if [ -f $HOME/.lymbix_api/init ]; then
     source $HOME/.lymbix_api/init
