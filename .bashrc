@@ -96,7 +96,7 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-    git_ps=1
+    if [ "`type -t __git_ps1`" = 'function' ]; then git_ps=1; fi;
 elif [ -f /etc/bash_completion.d/git ]; then
     source /etc/bash_completion.d/git
     git_ps=1
