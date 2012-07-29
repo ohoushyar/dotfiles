@@ -1,6 +1,3 @@
-if [[ $- =~ 'i' ]]; then
-    echo 'Loading .bashrc ...'
-fi
 
 export PATH=$PATH:/opt/local/bin:~/bin
 
