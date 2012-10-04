@@ -6,7 +6,7 @@
 [alias]
     week-log = log --oneline --graph --since=\"1 weeks ago\" --pretty=\"%h %Cgreen%d%Creset - %ar by %Cred%an%Creset: %s\"
     all-log-graph = log --oneline --graph --pretty=\"%h %Cgreen%d%Creset - %ar by %Cred%an%Creset: %s\"
-    llog = log --decorate --oneline -20
+    llog = log --decorate --oneline --pretty=\"%h %Cgreen%d%Creset - %ar by %Cred%an%Creset: %s\" -20
     grep = grep -n
     rebaseme = rebase --preserve-merges HEAD@{upstream}
     st = status
