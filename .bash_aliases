@@ -12,7 +12,7 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
 alias rmbak="find . -iname '*~' | xargs rm -v"
-alias ack="ack -i --nopager"
+alias ack="ack -i"
 
 alias star='ssh -p24312 space@localhost'
 
