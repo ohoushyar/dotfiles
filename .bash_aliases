@@ -18,6 +18,10 @@ alias star='ssh -p24312 space@localhost'
 
 epoch_to_datetime() { perl -MDateTime -E "say DateTime->from_epoch(epoch => $1)->datetime();"; }
 perl_mod_version() { perl -M$1 -E 'say '$1'->VERSION;'; }
+ln-safe() {
+    sudo mv $2 $2.`date +%s`;
+    sudo ln -s $1 $2;
+}
 
 
 # C command line code configuration
