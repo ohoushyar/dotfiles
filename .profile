@@ -1,8 +1,6 @@
-# MacPorts Installer addition on 2010-01-06_at_00:11:52: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
+PATH="/usr/local/bin:$PATH"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

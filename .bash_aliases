@@ -29,6 +29,12 @@ go_libs="-lm"
 go_flags=" -g -Wall -include allheads.h -O3"
 alias go_c="c99 -xc - $go_libs $go_flags"
 
+# Vagrant stuff
+alias vup='vagrant up'
+alias vhalt='vagrant halt'
+alias vssh='vagrant ssh'
+alias vprov='vagrant provision'
+
 # Stuff I don't want to be public or perhaps share in github
 if [ -f $HOME/.bash_aliases_more ]; then
     source ~/.bash_aliases_more

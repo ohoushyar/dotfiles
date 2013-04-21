@@ -1,6 +1,3 @@
-export PATH=$PATH:/opt/local/bin:$HOME/bin
-export PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
