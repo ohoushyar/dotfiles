@@ -91,7 +91,7 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+    source /etc/bash_completion
     if [ "`type -t __git_ps1`" = 'function' ]; then git_ps=1; fi;
 elif [ -f /etc/bash_completion.d/git ]; then
     source /etc/bash_completion.d/git
@@ -99,7 +99,10 @@ elif [ -f /etc/bash_completion.d/git ]; then
 elif [ -f $HOME/.git-completion.sh ]; then
     # git auto completion
     source $HOME/.git-completion.sh
-    git_ps=1
+    if [ -f $HOME/.git-prompt.sh ]; then
+        source $HOME/.git-prompt.sh
+        git_ps=1
+    fi
 fi
 
 if [ -n "$git_ps" ]; then
