@@ -1,7 +1,7 @@
 #!/bin/bash
 RUNDIR=`pwd`
 
-FILENAMES=( .ackrc .bashrc .gitconfig .screenrc .profile .module-starter .bash_aliases .perltidyrc )
+FILENAMES=( .bash_profile .ackrc .bashrc .gitconfig .screenrc .profile .module-starter .bash_aliases .perltidyrc )
 
 for name in ${FILENAMES[@]}; do
     echo --- $name ---
