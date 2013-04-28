@@ -106,8 +106,9 @@ elif [ -f $HOME/.git-completion.sh ]; then
 fi
 
 if [ -n "$git_ps" ]; then
-    PS1="[$PS1]"'$(__git_ps1 " \e[0;33m(%s)\e[0m ")\$ '
+    PS1="[$PS1]\n"'$(__git_ps1 "\e[0;33m(%s)\e[0m")'
 fi
+PS1="$PS1"'\$ '
 
 if [ -f $HOME/.lymbix_api/init ]; then
     source $HOME/.lymbix_api/init
