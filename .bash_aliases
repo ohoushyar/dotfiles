@@ -37,6 +37,6 @@ alias vprov='vagrant provision'
 
 # Stuff I don't want to be public or perhaps share in github
 if [ -f $HOME/.bash_aliases_more ]; then
-    source ~/.bash_aliases_more
+    source $HOME/.bash_aliases_more
 fi
 
