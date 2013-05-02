@@ -1,6 +1,19 @@
-PATH="/usr/local/bin:$PATH"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
+if [ -d "/usr/local/bin" ]; then
+    PATH="/usr/local/bin:$PATH"
+fi
+
+if [ -d "$HOME/.rvm/bin" ]; then
+    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
+
+if [ -d "$HOME/dev/perl/perl6/rak/bin" ]; then
+    PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
+fi
+export PATH
+
+# Set git dirty status
+GIT_PS1_SHOWDIRTYSTATE=
+GIT_PS1_SHOWUNTRACKEDFILES=
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -17,6 +30,6 @@ fi
 
 # Stuff I don't want to be public or perhaps share in github
 if [ -f $HOME/.profile_more ]; then
-    source ~/.profile_more
+    source $HOME/.profile_more
 fi
 
