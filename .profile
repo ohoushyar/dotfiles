@@ -1,5 +1,5 @@
 if [ -d "/usr/local/bin" ]; then
-    PATH="/usr/local/bin:$PATH"
+    PATH=/usr/local/bin:$PATH
 fi
 
 if [ -d "$HOME/.rvm/bin" ]; then
@@ -9,6 +9,12 @@ fi
 if [ -d "$HOME/dev/perl/perl6/rak/bin" ]; then
     PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
 fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH=$HOME/bin:$PATH
+fi
+
 export PATH
 
 # Set git dirty status
@@ -23,10 +29,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
 
 # Stuff I don't want to be public or perhaps share in github
 if [ -f $HOME/.profile_more ]; then
