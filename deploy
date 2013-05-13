@@ -1,10 +1,19 @@
 #!/bin/bash
 RUNDIR=`pwd`
 
-FILENAMES=( .bash_profile .ackrc .bashrc .gitconfig .screenrc .profile .module-starter .bash_aliases .perltidyrc )
+FILENAMES=`find . -maxdepth 1 -type f | sed 's/\.\///' | grep -v '~'`
+IGNORE_FILENAMES='TODO README.md deploy .git-completion.sh .git-prompt.sh .gitignore'
 
 for name in ${FILENAMES[@]}; do
     echo --- $name ---
+
+    # Ignore IGNORE_FILENAMES
+    ignore_result=`echo $IGNORE_FILENAMES | grep $name`
+    if [ -n "$ignore_result" ]; then
+        echo "ignore IGNORE_FILENAME [$name]"
+        continue
+    fi
+
     # Rename already exists file with old ext
     dest=$HOME/$name
     if [ -e $dest ]; then
