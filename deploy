@@ -2,7 +2,7 @@
 RUNDIR=`pwd`
 
 FILENAMES=`find . -maxdepth 1 -type f | sed 's/\.\///' | grep -v '~'`
-IGNORE_FILENAMES='TODO README.md deploy .git-completion.sh .git-prompt.sh .gitignore'
+IGNORE_FILENAMES='TODO README.md deploy .git-completion.sh .git-prompt.sh .gitignore .DS_Store'
 
 for name in ${FILENAMES[@]}; do
     echo --- $name ---
