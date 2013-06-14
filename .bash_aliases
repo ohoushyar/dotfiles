@@ -9,6 +9,13 @@ alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Git aliases
+alias gap='git add -p'
+alias gst='git status'
+alias gci='git commit'
+alias gdiff='git diff'
+alias gdiffc='git diff --cached'
+
 alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
 alias rmbak="find . -iname '*~' | xargs rm -v"

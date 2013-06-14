@@ -121,6 +121,7 @@ bind 'K' kill
 bind 'I' login on
 bind 'O' login off
 bind '}' history
+bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
 
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
