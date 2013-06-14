@@ -1,4 +1,8 @@
-omid-home
+dotfiles
 =========
 
-Mostly my config files
+To install:
+
+    $ git clone 
+    $ cd dotfiles
+    $ ./deploy
