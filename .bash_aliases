@@ -20,6 +20,7 @@ alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
 alias rmbak="find . -iname '*~' | xargs rm -v"
 alias ack="ack -i"
+alias cpanm="cpanm --mirror https://cpan.metacpan.org/"
 
 alias star='ssh -p24312 space@localhost'
 
