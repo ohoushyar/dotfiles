@@ -126,4 +126,6 @@ if [ -f $HOME/perl5/perlbrew/etc/bashrc ]; then
 fi
 
 # local::lib config
-eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+if [ -f $HOME/perl5/lib/perl5 ]; then
+    eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+fi
