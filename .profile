@@ -15,6 +15,16 @@ if [ -d "$HOME/bin" ] ; then
     PATH=$HOME/bin:$PATH
 fi
 
+#local lib stuff
+if [ -d "$HOME/perl5/lib/perl5" ] ; then
+    PERL5LIB=$HOME/perl5/lib/perl5:$PERL5LIB
+fi
+export PERL5LIB
+
+if [ -d "$HOME/perl5/bin" ] ; then
+    PATH=$HOME/perl5/bin:$PATH
+fi
+
 export PATH
 
 # Set git dirty status

@@ -19,6 +19,9 @@ alias gif='git fetch'
 alias gpr='git pull --rebase'
 alias gwc='git fetch && git llog --stat HEAD@{upstream}..HEAD'
 
+# Open files which git shows as modified
+alias om='vim `git status | grep modified | perl -ne "s/.*modified:\s+//; print" | xargs`'
+
 alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
 alias rmbak="find . -iname '*~' | xargs rm -v"
