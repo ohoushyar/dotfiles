@@ -27,7 +27,7 @@ for name in ${FILENAMES[@]}; do
         fi
     fi
 
-    # Creat a symlink
+    # Create a symlink
     ln -sv $RUNDIR/$name $HOME/$name
 done
 
