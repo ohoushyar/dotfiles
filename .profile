@@ -10,6 +10,15 @@ if [ -d "$HOME/dev/perl/perl6/rak/bin" ]; then
     PATH=$HOME/dev/perl/perl6/rak/bin:$PATH
 fi
 
+# Android tool path
+if [ -d "$HOME/dev/android/adt-bundle-mac-x86_64-20130717/sdk/tools" ]; then
+    PATH=$HOME/dev/android/adt-bundle-mac-x86_64-20130717/sdk/tools:$PATH
+fi
+if [ -d "$HOME/dev/android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools" ]; then
+    PATH=$HOME/dev/android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:$PATH
+fi
+
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH=$HOME/bin:$PATH
