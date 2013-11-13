@@ -45,12 +45,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -111,9 +111,11 @@ elif [ -f $HOME/.git-completion.sh ]; then
 fi
 
 if [ -n "$git_ps" ]; then
-    PS1="[$PS1]\n"'$(__git_ps1 "\e[0;33m(%s)\e[0m")'
+    COLOR_GREEN='\033[0;32m'
+    PS1="[$PS1]\n\[${COLOR_GREEN}\]"'$(__git_ps1 "(%s) ")'
 fi
-PS1="$PS1"'\$ '
+COLOR_DEFAULT='\033[0m'
+PS1="$PS1\[${COLOR_DEFAULT}\]"'\$ '
 
 if [ -f $HOME/.lymbix_api/init ]; then
     source $HOME/.lymbix_api/init
