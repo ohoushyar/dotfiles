@@ -6,9 +6,9 @@
 [ -z "$PS1" ] && return
 
 # Load profile if it's not login mode
-if [[ $0 != -* ]]; then
-    source $HOME/.profile
-fi
+# if [[ $0 != -* ]]; then
+#     source $HOME/.profile
+# fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
