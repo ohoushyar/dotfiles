@@ -111,11 +111,13 @@ defbce "on"
 # keybindings
 #
 
+# change ^a to ^\
+escape ^\\
+
 #remove some stupid / dangerous key bindings
 bind k
 bind ^k
 bind .
-bind ^\
 bind \\
 bind ^h
 bind h
