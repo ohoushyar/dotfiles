@@ -49,6 +49,10 @@ alias vhalt='vagrant halt'
 alias vssh='vagrant ssh'
 alias vprov='vagrant provision'
 
+# Encryption
+alias enc='openssl enc -e -blowfish '
+alias dec='openssl enc -d -blowfish '
+
 # Stuff I don't want to be public or perhaps share in github
 if [ -f $HOME/.bash_aliases_more ]; then
     source $HOME/.bash_aliases_more
