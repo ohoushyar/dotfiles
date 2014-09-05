@@ -58,3 +58,5 @@ if [ -f $HOME/.bash_aliases_more ]; then
     source $HOME/.bash_aliases_more
 fi
 
+# ssh agent
+alias get_ssh_agent='eval `ssh-agent`'

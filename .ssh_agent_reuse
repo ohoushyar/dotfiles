@@ -1,0 +1,18 @@
+#!/bin/bash
+
+DOT_SSH_ROOT="$HOME/.ssh"
+TMP_SSH_SCRIPT="/tmp/.ssh-script"
+
+export SSH_AUTH_SOCK="$DOT_SSH_ROOT/.ssh-agent-socket"
+
+ssh-add -l >/dev/null 2>&1
+if [ $? = 2 ]; then
+   # No ssh-agent running
+   rm -rf $SSH_AUTH_SOCK
+   # >| allows output redirection to over-write files if no clobber is set
+   ssh-agent -a $SSH_AUTH_SOCK >| $TMP_SSH_SCRIPT
+   source $TMP_SSH_SCRIPT
+   echo $SSH_AGENT_PID >| $DOT_SSH_ROOT/.ssh-agent-pid
+   rm $TMP_SSH_SCRIPT
+fi
+

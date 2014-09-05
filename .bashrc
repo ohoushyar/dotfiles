@@ -131,3 +131,11 @@ fi
 if [ -f $HOME/perl5/lib/perl5 ]; then
     eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 fi
+
+if [ -f $HOME/.ssh_agent_reuse ]; then
+    source $HOME/.ssh_agent_reuse
+fi
+
+# Disable gnome keyring control
+#unset GNOME_KEYRING_CONTROL
+
