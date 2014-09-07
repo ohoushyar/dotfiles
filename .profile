@@ -34,7 +34,15 @@ if [ -d "$HOME/perl5/bin" ] ; then
     PATH=$HOME/perl5/bin:$PATH
 fi
 
+if [ -d "/usr/local/sbin" ] ; then
+    PATH=/usr/local/sbin:$PATH
+fi
+
 export PATH
+
+# Setting for the new UTF-8 terminal support in MacOSx
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Set git dirty status
 GIT_PS1_SHOWDIRTYSTATE=
