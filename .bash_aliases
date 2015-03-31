@@ -24,7 +24,7 @@ alias om='vim `git status | grep modified | perl -ne "s/.*modified:\s+//; print"
 
 alias grep='grep --color=auto'
 alias pwsafe='sudo pwsafe -E '
-alias rmbak="find . -iname '*~' | xargs rm -v"
+alias rmbak="find . -iname '*~' -exec rm -v {} \;"
 alias ack="ack -i"
 alias cpanm="cpanm --mirror https://cpan.metacpan.org/"
 
