@@ -134,6 +134,12 @@ fi
 
 if [ -f $HOME/.ssh_agent_reuse ]; then
     source $HOME/.ssh_agent_reuse
+
+    # add keys
+    ssh-add -l >/dev/null 2>&1
+    if [ $? = 2 ]; then
+        ssh-add ~/.ssh/id_dsa ~/.ssh/id_dsa_cheetahmail
+    fi
 fi
 
 # Disable gnome keyring control
