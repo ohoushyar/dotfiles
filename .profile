@@ -40,6 +40,14 @@ fi
 
 export PATH
 
+if [ -d "$HOME/dev/go" ] ; then
+    GOPATH=$HOME/dev/go
+fi
+if [ -d "/usr/local/go" ] ; then
+    GOPATH=$GOPATH:/usr/local/go
+fi
+export GOPATH
+
 # Setting for the new UTF-8 terminal support in MacOSx
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

@@ -110,9 +110,10 @@ elif [ -f $HOME/.git-completion.sh ]; then
     fi
 fi
 
+COLOR_GREEN='\033[0;32m'
+PS1="[$PS1]\n\[${COLOR_GREEN}\]"
 if [ -n "$git_ps" ]; then
-    COLOR_GREEN='\033[0;32m'
-    PS1="[$PS1]\n\[${COLOR_GREEN}\]"'$(__git_ps1 "(%s) ")'
+    PS1="$PS1"'$(__git_ps1 "(%s) ")'
 fi
 COLOR_DEFAULT='\033[0m'
 PS1="$PS1\[${COLOR_DEFAULT}\]"'\$ '
