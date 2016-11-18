@@ -13,6 +13,7 @@
     diff-centos = diff --name-only origin/release/3.1.0.0
     diff-master = diff --name-only origin/master
     last = cat-file commit HEAD
+    g = log --graph --pretty=format:'%Cred%h%Creset %Cgreen%ai%Creset %C(bold blue)%an%Creset%C(yellow)%d%Creset %s'
 [diff]
     tool = vimdiff
 

@@ -104,10 +104,13 @@ elif [ -f /etc/bash_completion.d/git ]; then
 elif [ -f $HOME/.git-completion.sh ]; then
     # git auto completion
     source $HOME/.git-completion.sh
-    if [ -f $HOME/.git-prompt.sh ]; then
-        source $HOME/.git-prompt.sh
-        git_ps=1
-    fi
+elif [ -f $HOME/.git-completion.bash ]; then
+    # git auto completion
+    source $HOME/.git-completion.bash
+fi
+if [ -f $HOME/.git-prompt.sh ]; then
+    source $HOME/.git-prompt.sh
+    git_ps=1
 fi
 
 COLOR_GREEN='\033[0;32m'
