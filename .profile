@@ -38,13 +38,14 @@ if [ -d "/usr/local/sbin" ] ; then
     PATH=/usr/local/sbin:$PATH
 fi
 
+if [ -d "/usr/local/protoc" ] ; then
+    PATH=/usr/local/protoc/bin:$PATH
+fi
+
 export PATH
 
 if [ -d "$HOME/dev/go" ] ; then
-    GOPATH=$HOME/dev/go
-fi
-if [ -d "/usr/local/go" ] ; then
-    GOPATH=$GOPATH:/usr/local/go
+    GOPATH=$HOME/golib
 fi
 export GOPATH
 

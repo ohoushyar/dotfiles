@@ -62,3 +62,9 @@ fi
 
 # ssh agent
 alias get_ssh_agent='eval `ssh-agent`'
+
+# carton
+alias ce='carton exec -- '
+
+# GO lang
+alias add_curr_gopath='export GOPATH=`pwd`:$GOPATH'
