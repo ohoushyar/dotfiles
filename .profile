@@ -45,7 +45,7 @@ fi
 export PATH
 
 if [ -d "$HOME/dev/go" ] ; then
-    GOPATH=$HOME/golib
+    GOPATH=$HOME/go
 fi
 export GOPATH
 
