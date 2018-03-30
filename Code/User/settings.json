@@ -9,6 +9,7 @@
     // "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 17,
+    "editor.fontWeight": "100",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": true,
     "editor.rulers": [
@@ -27,5 +28,7 @@
     "go.inferGopath": true,
     "workbench.iconTheme": "vs-seti",
     "go.goroot": "/usr/local/go",
-    "vim.disableAnnoyingNeovimMessage": true
+    "workbench.panel.location": "bottom",
+    "go.gopath": "/Users/omid.houshyarcheetahdigital.com/go",
+    "extensions.ignoreRecommendations": false
 }
