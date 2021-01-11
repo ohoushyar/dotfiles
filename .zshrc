@@ -93,3 +93,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/.bash_aliases
+
+export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/homebrew/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/lib/aws/bin:$PATH
+export PATH=$HOME/miniconda3/bin:$PATH
+
+# pyenv
+# Load pyenv automatically by appending
+# the following to ~/.zshrc:
+eval "$(pyenv init -)"

@@ -70,4 +70,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=
 if [ -f $HOME/.profile_more ]; then
     source $HOME/.profile_more
 fi
+if [ -f $HOME/.bash_profile_more ]; then
+    source $HOME/.bash_profile_more
+fi
 
